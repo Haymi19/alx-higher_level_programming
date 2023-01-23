@@ -3,7 +3,7 @@ import sys
 def safe_print_integer_err(value):
     """Prints an integer with "{:d}".format().
 
-    If a ValueError message is recieved, a corresponding
+    If a ValueError message is recieved, the
     message is printed to standard error.
 
     Args:
