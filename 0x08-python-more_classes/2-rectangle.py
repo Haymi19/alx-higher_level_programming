@@ -1,89 +1,87 @@
 #!/usr/bin/python3
-"""Class that defines area and perimeter
+"""
+Calculating the area and perimeter of a rectangle
 """
 
 
 class Rectangle:
-    """Class defined by width and height.
-    Args:
-        height (int): height of rectangle
-    Attributes:
-        width (int): width of rectangle
-    """
+    """ Class that defines a rectangle """
 
     def __init__(self, width=0, height=0):
-        # attribute that engages the setters defined below
-        self.height = height
+        """ initializing the instances
+        Args:
+            width: rectangle width
+            height: rectangle height
+        """
+
         self.width = width
-
-    @property
-    def height(self):
-        """height getter, setter with same method name
-        Returns:
-            height (int): height of rectangle
-        """
-        return self.height
-
-    @height.setter
-    def height(self, value):
-        """Args:
-            value (int): height of rectangle
-        Attributes:
-            __height (int): height of rectangle
-        Raises:
-            TypeError: if value is not an integer
-            ValueError: if value is less than 0
-        """
-        if type(value) is not int:
-            raise TypeError('height must be an integer')
-        if value < 0:
-            raise ValueError('height must be >= 0')
-        self.__height = value
+        self.height = height
 
     @property
     def width(self):
-        """width getter, setter with same method name
+        """ returns the value of the width
         Returns:
-            width (int): width of rectangle
+            width of the rectangle
         """
-        return self.width
+
+        return self.__width
 
     @width.setter
     def width(self, value):
-        """Args:
-            value (int): width of rectangle
-        Attributes:
-            __width (int): width of rectangle
+        """ defines the width
+        Args:
+            value: width
         Raises:
-            TypeError: if value is not an integer
-            ValueError: if value is less than 0
+            TypeError: if width is not an integer
+            ValueError: if width is less than zero
         """
-        if type(value) is not int:
-            raise TypeError('width must be an integer')
+
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError('width must be >= 0')
+            raise ValueError("width must be >= 0")
         self.__width = value
 
-    def area(self):
-        """Calulates area of rectangle.
-        Attributes:
-            height (int): height of rectangle
-            width (int): width of rectangle
+    @property
+    def height(self):
+        """ returns the value of the height
         Returns:
-            area (int): height times width
+            height of the rectangle
         """
-        area = self.height * self.width
-        return area
+
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """ defines the height
+        Args:
+            value: height
+        Raises:
+            TypeError: if height is not an integer
+            ValueError: if height is less than zero
+        """
+
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
+
+    def area(self):
+        """ calculates the Rectangle area
+        Returns:
+            area
+        """
+
+        return self.width * self.height
 
     def perimeter(self):
-         """Calulates perimeter of rectangle.
-        Attributes:
-            height (int): height of rectangle
-            width (int): width of rectangle
+        """ calculates the Rectangle perimeter
         Returns:
-            perimeter (int): adding all sides
+            perimeter
         """
+
         if self.width == 0 or self.height == 0:
             return 0
 
-        return (2 * self.height) + (2 * self.width)
+        return (2 * self.width) + (2 * self.height)
