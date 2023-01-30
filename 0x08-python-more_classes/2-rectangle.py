@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class Rectangle real definition
+"""Class that defines area and perimeter
 """
 
 
@@ -34,7 +34,7 @@ class Rectangle:
             TypeError: if value is not an integer
             ValueError: if value is less than 0
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError('height must be an integer')
         if value < 0:
             raise ValueError('height must be >= 0')
@@ -58,8 +58,32 @@ class Rectangle:
             TypeError: if value is not an integer
             ValueError: if value is less than 0
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError('width must be an integer')
         if value < 0:
             raise ValueError('width must be >= 0')
         self.__width = value
+
+    def area(self):
+        """Calulates area of rectangle.
+        Attributes:
+            __height (int): height of rectangle
+            __width (int): width of rectangle
+        Returns:
+            area (int): height times width
+        """
+        area = self.__height * self.__width
+        return area
+
+    def perimeter(self):
+         """Calulates perimeter of rectangle.
+        Attributes:
+            __height (int): height of rectangle
+            __width (int): width of rectangle
+        Returns:
+            perimeter (int): adding all sides
+        """
+        if width = 0 or height = 0:
+            perimeter = 0
+        perimeter = 2*self.__height + 2*self.__width
+        return perimeter
