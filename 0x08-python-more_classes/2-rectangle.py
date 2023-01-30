@@ -67,23 +67,23 @@ class Rectangle:
     def area(self):
         """Calulates area of rectangle.
         Attributes:
-            __height (int): height of rectangle
-            __width (int): width of rectangle
+            height (int): height of rectangle
+            width (int): width of rectangle
         Returns:
             area (int): height times width
         """
-        area = self.__height * self.__width
+        area = self.height * self.width
         return area
 
     def perimeter(self):
          """Calulates perimeter of rectangle.
         Attributes:
-            __height (int): height of rectangle
-            __width (int): width of rectangle
+            height (int): height of rectangle
+            width (int): width of rectangle
         Returns:
             perimeter (int): adding all sides
         """
-        if width = 0 or height = 0:
-            perimeter = 0
-        perimeter = 2*self.__height + 2*self.__width
-        return perimeter
+        if self.width == 0 or self.height == 0:
+            return 0
+
+        return (2 * self.height) + (2 * self.width)
