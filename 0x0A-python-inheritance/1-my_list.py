@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 class MyList(list):
     """ Inherits the attributes references of class list
+
     Args:
         list: class list
+
     """
 
     def print_sorted(self):
