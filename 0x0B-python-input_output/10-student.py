@@ -30,4 +30,4 @@ class Student:
                         d_list[satr] = obj[satr]
             return d_list
 
-        return obj 
+        return obj
