@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" Function that appends a string at the end of a text file 
-and returns the number of characters added.
+""" Function that appends a string at the end of a text file and returns the number of characters added.
 """
 
 
